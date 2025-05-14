@@ -3,15 +3,15 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import axios from 'axios'
 import '@/assets/css/LoginView.css'
+const baseURL = import.meta.env.VITE_AUTHORIZATION_URL
 
 const account = ref('')
 const password = ref('')
 const errorMsg = ref('')
 const router = useRouter()
-
 const handleLogin = async () => {
   try {
-    const response = await axios.post('https://localhost:44357/api/authorization/login', {
+    const response = await axios.post(`${baseURL}/api/authorization/login`, {
       account : account.value,
       password: password.value
     })
