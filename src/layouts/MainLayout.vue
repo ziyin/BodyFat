@@ -36,6 +36,7 @@ function handleNavigate(page: string) {
   border-right: 1px solid #000;
   padding: 1rem;
   box-sizing: border-box;
+  background-color: #CF9E9E;
 }
 
 .main-content {
@@ -43,6 +44,7 @@ function handleNavigate(page: string) {
   padding: 2rem;
   overflow-y: auto;
   box-sizing: border-box;
+  background-color: #F2E6E6;
 }
 @media (max-width: 768px) {
   .layout {
